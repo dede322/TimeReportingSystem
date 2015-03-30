@@ -8,14 +8,14 @@ using System.Threading.Tasks;
 
 namespace DataAccess
 {
-    class JsonRepository<T> : IRepository<T>
+    public class JsonRepository<T> : IRepository<T>
     {
         public JsonRepository(string fileName)
             : base(fileName)
         {
         }
 
-        override public IEnumerable<T> GetAll()
+        public override IEnumerable<T> GetAll()
         {
             using (StreamReader sr = new StreamReader(fileName))
             {
@@ -28,7 +28,7 @@ namespace DataAccess
             }
         }
 
-        override public void Add(T element)
+        public override  void Add(T element)
         {
             using (StreamWriter sw = new StreamWriter(fileName))
             {
@@ -37,12 +37,12 @@ namespace DataAccess
             }
         }
 
-        override public void Delete(T element)
+        public override void Delete(T element)
         {
             throw new NotImplementedException();
         }
 
-        override public void Modify(T element)
+        public override void Modify(T element)
         {
             throw new NotImplementedException();
         }

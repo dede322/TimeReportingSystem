@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Models
 {
-    class User
+    public class User
     {
-        Guid Id { get; set; }
-        string Login { get; set; }
-        string Password { get; set; }
-        string FirstName { get; set; }
-        string LastName { get; set; }
-        DateTime RegistrationDate { get; set; }
-        string Locale { get; set; }
-        string TimeZone { get; set; }
+        public Guid Id { get; set; }
+        public string Login { get; set; }
+        public string Password { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public DateTime RegistrationDate { get; set; }
+        public string Locale { get; set; }
+        public string TimeZone { get; set; }
     }
 }

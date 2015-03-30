@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess
 {
-    abstract class IRepository<T>
+    public abstract class IRepository<T>
     {
         protected string fileName;
 
