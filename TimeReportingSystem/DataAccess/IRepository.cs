@@ -6,11 +6,17 @@ using System.Threading.Tasks;
 
 namespace DataAccess
 {
-    interface IRepository <T>
+    abstract class IRepository<T>
     {
-        IEnumerable<T> GetAll();
-        void Add(T element);
-        void Delete(T element);
-        void Modify(T element);
+        protected string fileName;
+
+        public IRepository(string fileName)
+        {
+            this.fileName = fileName;
+        }
+        abstract public IEnumerable<T> GetAll();
+        abstract public void Add(T element);
+        abstract public void Delete(T element);
+        abstract public void Modify(T element);
     }
 }
