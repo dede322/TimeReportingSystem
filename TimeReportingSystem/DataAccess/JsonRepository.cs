@@ -8,11 +8,12 @@ using System.Threading.Tasks;
 
 namespace DataAccess
 {
-    public class JsonRepository<T> : IRepository<T>
+    public class JsonRepository<T> : Repository<T>
     {
         public JsonRepository(string fileName)
             : base(fileName)
         {
+            elements = GetAll().ToList();   
         }
 
         public override IEnumerable<T> GetAll()
@@ -30,21 +31,32 @@ namespace DataAccess
 
         public override  void Add(T element)
         {
-            using (StreamWriter sw = new StreamWriter(fileName))
-            {
-                var jsonElement = JsonConvert.SerializeObject(element);
-                sw.WriteLine(jsonElement);
-            }
+            Elements.Add(element);
+            saveToFile(fileName);
         }
 
-        public override void Delete(T element)
+        public override void Delete(T removedElement)
         {
-            throw new NotImplementedException();
+            //IEnumerable<T> elements = GetAll();
+            elements.Remove(removedElement); //Where(m => m.Equals(removedElement));
+            saveToFile(fileName);
         }
 
         public override void Modify(T element)
         {
             throw new NotImplementedException();
+        }
+
+        private void saveToFile(string fileName)
+        {
+            using (StreamWriter sw = new StreamWriter(fileName))
+            {
+                foreach (T element in Elements)
+                {
+                    var jsonElement = JsonConvert.SerializeObject(element);
+                    sw.WriteLine(jsonElement);
+                }
+            }
         }
     }
 }

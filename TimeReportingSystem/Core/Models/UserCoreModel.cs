@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccess.Models
+namespace Core.Models
 {
-    public class User
+    public class UserCoreModel
     {
         public Guid Id { get; set; }
         public string Login { get; set; }
@@ -19,7 +19,7 @@ namespace DataAccess.Models
 
         public override bool Equals(object obj)
         {
-            User user = obj as User;
+            UserCoreModel user = obj as UserCoreModel;
             if (user != null)
                 return this.Id.Equals(user.Id);
 

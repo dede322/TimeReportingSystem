@@ -24,7 +24,14 @@ namespace Test
                 RegistrationDate = new DateTime(1990, 3, 23)
             };
 
-            userJson.Add(user);
+            //userJson.Add(user);
+
+            //for(int i = userJson.Elements.Count - 1; i >= 0; i--)
+            //{
+            //    userJson.Delete(userJson.Elements[i]);
+            //}
+
+            //userJson.Delete(user);
         }
     }
 }
