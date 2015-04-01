@@ -8,9 +8,9 @@ using System.Web;
 
 namespace UI.Models
 {
-    public class MapperUI
+    class MapperUIConfiguration
     {
-        public MapperUI()
+        public static void Configure()
         {
             Mapper.CreateMap<UserCoreModel, UserUIModel>();
             Mapper.CreateMap<UserUIModel, UserCoreModel>();

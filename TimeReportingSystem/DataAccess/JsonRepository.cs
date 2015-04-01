@@ -13,7 +13,7 @@ namespace DataAccess
         public JsonRepository(string fileName)
             : base(fileName)
         {
-            elements = GetAll().ToList();   
+            elements = GetAll().ToList(); 
         }
 
         public override IEnumerable<T> GetAll()
@@ -37,8 +37,7 @@ namespace DataAccess
 
         public override void Delete(T removedElement)
         {
-            //IEnumerable<T> elements = GetAll();
-            elements.Remove(removedElement); //Where(m => m.Equals(removedElement));
+            elements.Remove(removedElement); 
             saveToFile(fileName);
         }
 

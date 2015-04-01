@@ -1,6 +1,18 @@
-﻿@{
+﻿@using UI.Models
+@model IEnumerable<ProjectUIModel>
+@{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Проэкты</h2>
+
+@using (Html.BeginForm("Index", "Project"))
+{
+    foreach (ProjectUIModel project in Model)
+    {
+        <p>@project.Name</p>
+    }
+}
+
+

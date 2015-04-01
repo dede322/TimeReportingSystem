@@ -1,5 +1,7 @@
-﻿using Core.Models;
+﻿using AutoMapper;
+using Core.Models;
 using DataAccess;
+using DataAccess.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,11 +12,19 @@ namespace Core
 {
     public class ProjectCore
     {
-        JsonRepository<ProjectCoreModel> repository = new JsonRepository<ProjectCoreModel>("Projects.json");
+        JsonRepository<Project> repository;
+
+        public ProjectCore()
+        {
+            repository = new JsonRepository<Project>(Environment.CurrentDirectory + @"/Repositories/Projects.json");
+            MapperCoreConfiguration.Configure();
+        }
 
         public IEnumerable<ProjectCoreModel> GetAll()
         {
-            return repository.GetAll();
+            IEnumerable<ProjectCoreModel> projects = 
+                Mapper.Map< IEnumerable<Project>, IEnumerable<ProjectCoreModel>>(repository.GetAll());
+            return projects;
         }
     }
 }

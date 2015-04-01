@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace Core
 {
-    class MapperCore
+    class MapperCoreConfiguration
     {
-        public MapperCore()
+        public static void Configure()
         {
             Mapper.CreateMap<UserCoreModel, User>();
             Mapper.CreateMap<User, UserCoreModel>();
