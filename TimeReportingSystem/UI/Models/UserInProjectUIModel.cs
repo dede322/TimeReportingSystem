@@ -1,21 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Web;
 
-namespace DataAccess.Models
+namespace UI.Models
 {
-    public class UserInProject
+    public class UserInProjectUIModel
     {
         public Guid Id { get; set; }
         public Guid UserId { get; set; }
         public Guid ProjectId { get; set; }
-        public UserLevel userLevel { get; set; }
+        public UserLevelUIModel userLevel { get; set; }
 
         public override bool Equals(object obj)
         {
-            UserInProject userInProject = obj as UserInProject;
+            UserInProjectUIModel userInProject = obj as UserInProjectUIModel;
             if (userInProject != null)
                 return this.Id.Equals(userInProject.Id);
 

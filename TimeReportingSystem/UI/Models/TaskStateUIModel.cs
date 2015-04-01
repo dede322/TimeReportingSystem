@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Core.Models
+namespace DataAccess.Models
 {
-    public enum UserLevelCoreModel { None, Member, Manager }
+    enum TaskStateUIModel { Draft, Started, Completed }
 }

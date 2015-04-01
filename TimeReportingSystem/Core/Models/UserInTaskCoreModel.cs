@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccess.Models
+namespace Core.Models
 {
-    public class UserInTask
+    public class UserInTaskCoreModel
     {
         public Guid Id { get; set; }
         public Guid UserId { get; set; }
@@ -14,7 +14,7 @@ namespace DataAccess.Models
 
         public override bool Equals(object obj)
         {
-            UserInTask userInTask = obj as UserInTask;
+            UserInTaskCoreModel userInTask = obj as UserInTaskCoreModel;
             if (userInTask != null)
                 return this.Id.Equals(userInTask.Id);
 

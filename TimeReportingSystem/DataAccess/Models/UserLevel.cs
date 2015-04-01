@@ -6,5 +6,5 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Models
 {
-    public enum UserLevel { Member, Manager }
+    public enum UserLevel { None, Member, Manager }
 }

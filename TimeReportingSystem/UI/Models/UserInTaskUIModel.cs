@@ -6,18 +6,17 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Models
 {
-    public class UserInProject
+    public class UserInTaskUIModel
     {
         public Guid Id { get; set; }
         public Guid UserId { get; set; }
-        public Guid ProjectId { get; set; }
-        public UserLevel userLevel { get; set; }
+        public Guid TaskId { get; set; }
 
         public override bool Equals(object obj)
         {
-            UserInProject userInProject = obj as UserInProject;
-            if (userInProject != null)
-                return this.Id.Equals(userInProject.Id);
+            UserInTaskUIModel userInTask = obj as UserInTaskUIModel;
+            if (userInTask != null)
+                return this.Id.Equals(userInTask.Id);
 
             return false;
         }

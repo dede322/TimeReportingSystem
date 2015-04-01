@@ -4,18 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccess.Models
+namespace Core.Models
 {
-    public class UserInProject
+    public class UserInProjectCoreModel
     {
         public Guid Id { get; set; }
         public Guid UserId { get; set; }
         public Guid ProjectId { get; set; }
-        public UserLevel userLevel { get; set; }
+        public UserLevelCoreModel userLevel { get; set; }
 
         public override bool Equals(object obj)
         {
-            UserInProject userInProject = obj as UserInProject;
+            UserInProjectCoreModel userInProject = obj as UserInProjectCoreModel;
             if (userInProject != null)
                 return this.Id.Equals(userInProject.Id);
 
