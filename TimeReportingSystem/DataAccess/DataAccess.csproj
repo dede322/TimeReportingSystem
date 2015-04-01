@@ -42,6 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Role.cs" />
+    <Compile Include="Models\UserInProject.cs" />
+    <Compile Include="Models\UserInTask.cs" />
+    <Compile Include="Models\UserLevel.cs" />
     <Compile Include="Repository.cs" />
     <Compile Include="JsonRepository.cs" />
     <Compile Include="Models\Project.cs" />

@@ -13,7 +13,8 @@ namespace Core.Models
         public string Description { get; set; }
         public DateTime Start { get; set; }
         public DateTime End { get; set; }
-        TaskStateCoreModel State { get; set; }
+        public TaskStateCoreModel State { get; set; }
+        public Guid IdProject { get; set; }
 
         public override bool Equals(object obj)
         {

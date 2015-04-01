@@ -13,7 +13,9 @@ namespace DataAccess.Models
         public string Description { get; set; }
         public DateTime Start { get; set; }
         public DateTime End { get; set; }
-        TaskState State { get; set; }
+        public TaskState State { get; set; }
+        public Guid IdProject { get; set; }
+
 
         public override bool Equals(object obj)
         {

@@ -14,6 +14,8 @@ namespace DataAccess.Models
         public string Description { get; set; }
         public DateTime created { get; set; }
         public DateTime edited { get; set; }
+        public Guid IdTask { get; set; }
+        public Guid IdUser { get; set; }
 
         public override bool Equals(object obj)
         {

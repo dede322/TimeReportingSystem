@@ -16,6 +16,7 @@ namespace Core.Models
         public DateTime RegistrationDate { get; set; }
         public string Locale { get; set; }
         public string TimeZone { get; set; }
+        public RoleCoreModel role { get; set; }
 
         public override bool Equals(object obj)
         {

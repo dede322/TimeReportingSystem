@@ -47,11 +47,13 @@
   <ItemGroup>
     <Compile Include="Core.cs" />
     <Compile Include="CoreMapper.cs" />
+    <Compile Include="Models\RoleCoreModel.cs" />
     <Compile Include="Models\ProjectCoreModel.cs" />
     <Compile Include="Models\TaskCoreModel.cs" />
     <Compile Include="Models\TaskReportCoreModel.cs" />
     <Compile Include="Models\TaskStateCoreModel.cs" />
     <Compile Include="Models\UserCoreModel.cs" />
+    <Compile Include="Models\UserLevelCoreModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
