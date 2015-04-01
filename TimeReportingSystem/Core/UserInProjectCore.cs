@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace Core
 {
-    public class Core
+    public class UserInProjectCore
     {
-
     }
 }

@@ -6,5 +6,5 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Models
 {
-    enum TaskState { Draft, Started, Completed }
+    public enum TaskState { Draft, Started, Completed }
 }
